@@ -17,4 +17,16 @@ function App() {
 export default App;
 
 
-const Button = styled.button``
+const Button = styled.button`
+  margin-left:10px;
+  padding:7px 10px;
+  background:red;
+  color:white;
+  font-size:1.3rem;
+  border:none;
+  border-radius:4px;
+  :hover{
+    background:blue;
+  }
+  /* box-shadow: 1px 2px 7px red; */
+`
