@@ -1,12 +1,13 @@
 import React from "react"
 import './App.css';
-import styled, {ThemeProvider} from "styled-components"
+import styled, {ThemeProvider, css} from "styled-components"
 
 function App() {
 
   const theme = {
     primary:"brown",
-    secondary:"black"
+    secondary:"black",
+    bgColor:"yellow"
   }
 
   return (
@@ -15,7 +16,7 @@ function App() {
       <h1>Styled Components</h1>
       <form action="">
         <input type="text"/>
-        <Button primary>Create</Button>   {/*primary is an argument that need to be passed for dynamic styled-components.*/}
+        <Button another="bgColor">Create</Button>   {/*primary is an argument that need to be passed for dynamic styled-components.*/}
       </form>
     </div>
     </ThemeProvider>
@@ -36,7 +37,11 @@ const Button = styled.button`
   border:none;
   border-radius:4px;
   :hover{
-    background:blue;
+    ${(props) => props.another && css`
+    background: ${(props) => props.theme[props.another]};
+    color:black;
+    font-size:1.8rem;
+  `}
   }
   /* box-shadow: 1px 2px 7px red; */
 `
