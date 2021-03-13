@@ -8,7 +8,7 @@ function App() {
       <h1>Styled Components</h1>
       <form action="">
         <input type="text"/>
-        <Button /*primary*/>Create</Button>   {/*primary is an argument that need to be passed for dynamic styled-components.*/}
+        <Button primary>Create</Button>   {/*primary is an argument that need to be passed for dynamic styled-components.*/}
       </form>
     </div>
   );
