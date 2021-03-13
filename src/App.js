@@ -8,7 +8,7 @@ function App() {
       <h1>Styled Components</h1>
       <form action="">
         <input type="text"/>
-        <Button>Create</Button>
+        <Button /*primary*/>Create</Button>
       </form>
     </div>
   );
@@ -20,7 +20,8 @@ export default App;
 const Button = styled.button`
   margin-left:10px;
   padding:7px 10px;
-  background:red;
+  /* background:red; */
+  background: ${(props) => props.primary? "red":"green"};
   color:white;
   font-size:1.3rem;
   border:none;
